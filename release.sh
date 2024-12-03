@@ -43,19 +43,19 @@ rm -rf node_modules
 rm -rf .cache
 rm -rf build
 
-# 7. 执行 npm install 安装依赖
-log "Running npm install..."
-npm install
+# 7. 执行 install 安装依赖
+log "Running yarn install..."
+yarn install
 if [ $? -ne 0 ]; then
-  log "Error: npm install failed"
+  log "Error: yarn install failed"
   exit 1
 fi
 
 # 8. 执行 build
-log "Running npm run build..."
-npm run build
+log "Running yarn run build..."
+yarn run build
 if [ $? -ne 0 ]; then
-  log "Error: npm run build failed"
+  log "Error: yarn run build failed"
   exit 1
 fi
 
